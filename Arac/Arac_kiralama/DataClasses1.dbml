@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="arac_kiralama" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-KJPA1CG;Initial Catalog=arac_kiralama;Integrated Security=True" SettingsObjectName="Arac_Kiralama_Otomasyonu.Properties.Settings" SettingsPropertyName="arac_kiralamaConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tblArac" Member="tblAracs">
+    <Type Name="tblArac">
+      <Column Name="arac_no" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="marka" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="model" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="plaka" Type="System.String" DbType="VarChar(9) NOT NULL" CanBeNull="false" />
+      <Column Name="yakit_turu" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="motor_gucu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tork" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="motor_hacmi" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="renk" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="vites" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="klima" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ruhsat_no" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="sigorta" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="muayne_bit_tar" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="ucret" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="kiraDurumu" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

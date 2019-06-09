@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{05055881-650D-4764-AE97-EC50C3B28623}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Arac_Kiralama_Otomasyonu</RootNamespace>
+    <AssemblyName>Arac_Kiralama_Otomasyonu</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Excel.4.5, Version=2.1.2.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Downloads\Compressed\output\output\net45\Excel.4.5.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.0.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\BunuSilme\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.Management.Sdk.Sfc, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.Smo, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.SmoExtended, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AracEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AracEkle.Designer.cs">
+      <DependentUpon>AracEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AracGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AracGuncelle.Designer.cs">
+      <DependentUpon>AracGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="arackirala.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="arackirala.Designer.cs">
+      <DependentUpon>arackirala.cs</DependentUpon>
+    </Compile>
+    <Compile Include="arackiralamaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>arackiralamaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="arac_kiralamaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>arac_kiralamaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataClasses1.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataClasses1.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="hasar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hasar.Designer.cs">
+      <DependentUpon>hasar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KullaniciYetkilendirme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KullaniciYetkilendirme.Designer.cs">
+      <DependentUpon>KullaniciYetkilendirme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="calisanekle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="calisanekle.Designer.cs">
+      <DependentUpon>calisanekle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CalisanGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CalisanGuncelle.Designer.cs">
+      <DependentUpon>CalisanGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Calisanlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calisanlar.Designer.cs">
+      <DependentUpon>Calisanlar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AracGeriAlma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AracGeriAlma.Designer.cs">
+      <DependentUpon>AracGeriAlma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="kiralama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kiralama.Designer.cs">
+      <DependentUpon>kiralama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="kullanicigiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kullanicigiris.Designer.cs">
+      <DependentUpon>kullanicigiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Makbuz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Makbuz.Designer.cs">
+      <DependentUpon>Makbuz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="muhasebe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="muhasebe.Designer.cs">
+      <DependentUpon>muhasebe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Panel.Designer.cs">
+      <DependentUpon>Panel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="araclar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="araclar.Designer.cs">
+      <DependentUpon>araclar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pdfAktarma.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="silinen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="silinen.Designer.cs">
+      <DependentUpon>silinen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YedekForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YedekForm.Designer.cs">
+      <DependentUpon>YedekForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YetkiCekme.cs" />
+    <Compile Include="YetkiVer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YetkiVer.Designer.cs">
+      <DependentUpon>YetkiVer.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AracEkle.resx">
+      <DependentUpon>AracEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AracEkle.tr-TR.resx">
+      <DependentUpon>AracEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AracGuncelle.resx">
+      <DependentUpon>AracGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="arackirala.resx">
+      <DependentUpon>arackirala.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="araclar.resx">
+      <DependentUpon>araclar.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="arackiralamaDataSet.xsc">
+      <DependentUpon>arackiralamaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="arackiralamaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>arackiralamaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="arackiralamaDataSet.xss">
+      <DependentUpon>arackiralamaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="arac_kiralamaDataSet.xsc">
+      <DependentUpon>arac_kiralamaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="arac_kiralamaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>arac_kiralamaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="arac_kiralamaDataSet.xss">
+      <DependentUpon>arac_kiralamaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataClasses1.dbml.layout">
+      <DependentUpon>DataClasses1.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="hasar.resx">
+      <DependentUpon>hasar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KullaniciYetkilendirme.resx">
+      <DependentUpon>KullaniciYetkilendirme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="calisanekle.resx">
+      <DependentUpon>calisanekle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CalisanGuncelle.resx">
+      <DependentUpon>CalisanGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Calisanlar.resx">
+      <DependentUpon>Calisanlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AracGeriAlma.resx">
+      <DependentUpon>AracGeriAlma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kiralama.resx">
+      <DependentUpon>kiralama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kullanicigiris.resx">
+      <DependentUpon>kullanicigiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Makbuz.resx">
+      <DependentUpon>Makbuz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="muhasebe.resx">
+      <DependentUpon>muhasebe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panel.resx">
+      <DependentUpon>Panel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="silinen.resx">
+      <DependentUpon>silinen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YedekForm.resx">
+      <DependentUpon>YedekForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YetkiVer.resx">
+      <DependentUpon>YetkiVer.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataClasses1.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataClasses1.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
